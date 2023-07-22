@@ -1,0 +1,28 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: luisanto <luisanto@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/07/20 12:17:25 by luisanto          #+#    #+#              #
+#    Updated: 2023/07/20 13:49:31 by luisanto         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = ft_display_file
+CC = gcc -Wall -Werror -Wextra
+SRC = main.c
+
+all: $(NAME)
+
+$(NAME):
+	$(CC) -o $(NAME) $(SRC)
+
+clean:
+	rm -rf *.o
+
+fclean: clean
+	rm $(NAME)
+
+re: fclean all
